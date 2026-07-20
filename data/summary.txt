@@ -1,0 +1,17 @@
+DEFECT LOG CLASSIFICATION - SUMMARY
+========================================
+Total logs processed: 82
+Auto-classified (trusted): 62
+Flagged for human review: 20
+High-severity items to prioritize: 47
+
+Accuracy against the answer key:
+  Simple keyword baseline: 76%
+  AI classifier:           98%
+
+Category breakdown:
+  Sensor Fault: 18
+  Communication Error: 18
+  Power Supply Issue: 17
+  Calibration Drift: 15
+  Mechanical Damage: 14

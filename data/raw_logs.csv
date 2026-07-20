@@ -1,0 +1,83 @@
+id,description
+1,"ultraschall sensor gibt keine daten, modul reagiert nicht"
+2,"CAN bus timeout, ECU no respond after 3 retries"
+3,"3.3v rail unstable, spannung schwankt stark am board"
+4,kalibrierung driftet seit firmware update leicht ab
+5,"connector pin verbogen, gehaeuse hat riss"
+6,"temp sensor liefert falsche werte, reading zu hoch"
+7,lin bus kommunikation bricht ab bei kaelte
+8,"power brownout beim start, board resettet"
+9,"offset drift am drucksensor, muss neu kalibriert werden"
+10,platine verkratzt aber funktion ok
+11,"radar modul kein signal, sensor tot"
+12,"spi communication error, checksum falsch"
+13,"voltage regulator ueberhitzt, 5v drops"
+14,"messwerte langsam abweichend, drift ueber zeit"
+15,stecker gebrochen beim einbau
+16,"hall sensor intermittierend, manchmal kein output"
+17,ethernet link down sporadisch im fahrzeug
+18,kurzschluss auf power line vermutet
+19,"sensor zeigt konstant 0, wahrscheinlich defekt"
+20,kalibrier offset zu gross nach transport
+21,"gehaeuse deformiert, aber elektronik laeuft"
+22,"i2c bus haengt, keine ack vom device"
+23,"board bekommt keine spannung, tot"
+24,light sensor ungenau bei sonnenlicht
+25,"firmware update failed, ecu nicht erreichbar"
+26,kondensator ausgelaufen auf der platine
+27,drift in messung nach temperaturwechsel
+28,pin header abgebrochen
+29,proximity sensor rauscht stark
+30,can frame verloren unter last
+31,netzteil liefert instabile spannung
+32,sensor kalibrierung ausserhalb toleranz
+33,leiterbahn gerissen sichtbar
+34,beschleunigungssensor liefert nan werte
+35,uart garbage data empfangen
+36,spannungsspitze hat regler beschaedigt
+37,langsamer drift am temperatur reading
+38,"schraube locker, modul wackelt"
+39,magnetsensor kein signal mehr
+40,"bus kollision auf can, viele fehler"
+41,ground loop verursacht noise auf supply
+42,kalibrierwerte verschoben nach reset
+43,"stecker korrodiert, kontakt schlecht"
+44,feuchtigkeitssensor eingefroren wert
+45,modbus antwortet nicht mehr
+46,5v line noise ueber grenzwert
+47,sensor genauigkeit nimmt langsam ab
+48,gehaeuse gebrochen beim sturz
+49,drucksensor liefert sprunghafte werte
+50,can bus komplett stumm nach start
+51,power supply schaltet nicht ein
+52,"kalibrierung langsam raus, offset waechst"
+53,platinenkante abgebrochen
+54,"optischer sensor verschmutzt, keine daten"
+55,kommunikation instabil bei vibration
+56,spannung faellt unter 3v bei last
+57,langzeit drift im gyroskop
+58,mechanischer bruch am connector
+59,sensor gibt sporadisch falsche id
+60,ecu verliert verbindung im standby
+61,"board zieht zu viel strom, ueberlast"
+62,kalibrier routine schlaegt fehl
+63,"kuehlkoerper lose, thermisch schlecht"
+64,naeherungssensor reagiert verzoegert
+65,crc fehler auf serieller schnittstelle
+66,regler liefert falsche ausgangsspannung
+67,messgenauigkeit unter spezifikation
+68,steckverbinder gebrochen nach vibration
+69,sensor uebertraegt nur nullen
+70,wlan modul verliert paket dauernd
+71,modul reagiert nicht nach firmware update
+72,"werte springen nach kalibrierung, ursache unklar"
+73,board verhaelt sich komisch seit einbau
+74,"intermittierender fehler, mal sensor mal bus"
+75,"system instabil, koennte spannung oder software sein"
+76,modul liefert daten aber langsam und ungenau
+77,nach transport funktioniert etwas nicht richtig
+78,"sporadischer reset, grund nicht identifiziert"
+79,kommunikation ok aber messwerte driften leicht
+80,gehaeuse ok aber sensor manchmal aus
+81,"fehler tritt nur bei hitze auf, unklar was"
+82,"device antwortet verzoegert, timing problem"

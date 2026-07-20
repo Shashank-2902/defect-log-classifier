@@ -1,0 +1,83 @@
+id,description,ai_category,ai_severity,ai_confidence,needs_review
+1,"ultraschall sensor gibt keine daten, modul reagiert nicht",Sensor Fault,High,high,False
+2,"CAN bus timeout, ECU no respond after 3 retries",Communication Error,High,high,False
+3,"3.3v rail unstable, spannung schwankt stark am board",Power Supply Issue,High,high,False
+4,kalibrierung driftet seit firmware update leicht ab,Calibration Drift,Low,high,False
+5,"connector pin verbogen, gehaeuse hat riss",Mechanical Damage,High,high,False
+6,"temp sensor liefert falsche werte, reading zu hoch",Sensor Fault,High,high,False
+7,lin bus kommunikation bricht ab bei kaelte,Communication Error,High,high,False
+8,"power brownout beim start, board resettet",Power Supply Issue,High,high,False
+9,"offset drift am drucksensor, muss neu kalibriert werden",Calibration Drift,Medium,high,False
+10,platine verkratzt aber funktion ok,Mechanical Damage,Low,high,True
+11,"radar modul kein signal, sensor tot",Sensor Fault,High,high,False
+12,"spi communication error, checksum falsch",Communication Error,Medium,high,False
+13,"voltage regulator ueberhitzt, 5v drops",Power Supply Issue,High,high,False
+14,"messwerte langsam abweichend, drift ueber zeit",Calibration Drift,Medium,high,True
+15,stecker gebrochen beim einbau,Mechanical Damage,High,high,False
+16,"hall sensor intermittierend, manchmal kein output",Sensor Fault,Medium,high,False
+17,ethernet link down sporadisch im fahrzeug,Communication Error,Medium,high,False
+18,kurzschluss auf power line vermutet,Power Supply Issue,High,high,False
+19,"sensor zeigt konstant 0, wahrscheinlich defekt",Sensor Fault,High,high,False
+20,kalibrier offset zu gross nach transport,Calibration Drift,Medium,high,False
+21,"gehaeuse deformiert, aber elektronik laeuft",Mechanical Damage,Medium,high,False
+22,"i2c bus haengt, keine ack vom device",Communication Error,High,high,False
+23,"board bekommt keine spannung, tot",Power Supply Issue,High,high,False
+24,light sensor ungenau bei sonnenlicht,Sensor Fault,Medium,high,False
+25,"firmware update failed, ecu nicht erreichbar",Communication Error,High,high,True
+26,kondensator ausgelaufen auf der platine,Power Supply Issue,High,high,True
+27,drift in messung nach temperaturwechsel,Calibration Drift,Medium,high,False
+28,pin header abgebrochen,Mechanical Damage,High,high,False
+29,proximity sensor rauscht stark,Sensor Fault,High,high,False
+30,can frame verloren unter last,Communication Error,High,high,False
+31,netzteil liefert instabile spannung,Power Supply Issue,High,high,False
+32,sensor kalibrierung ausserhalb toleranz,Calibration Drift,Medium,high,False
+33,leiterbahn gerissen sichtbar,Mechanical Damage,High,high,False
+34,beschleunigungssensor liefert nan werte,Sensor Fault,High,high,False
+35,uart garbage data empfangen,Communication Error,Medium,high,False
+36,spannungsspitze hat regler beschaedigt,Power Supply Issue,High,high,False
+37,langsamer drift am temperatur reading,Calibration Drift,Medium,high,True
+38,"schraube locker, modul wackelt",Mechanical Damage,Medium,high,False
+39,magnetsensor kein signal mehr,Sensor Fault,High,high,False
+40,"bus kollision auf can, viele fehler",Communication Error,High,high,False
+41,ground loop verursacht noise auf supply,Power Supply Issue,Medium,high,False
+42,kalibrierwerte verschoben nach reset,Calibration Drift,Medium,high,True
+43,"stecker korrodiert, kontakt schlecht",Mechanical Damage,High,medium,False
+44,feuchtigkeitssensor eingefroren wert,Sensor Fault,High,high,False
+45,modbus antwortet nicht mehr,Communication Error,High,high,False
+46,5v line noise ueber grenzwert,Power Supply Issue,High,high,False
+47,sensor genauigkeit nimmt langsam ab,Calibration Drift,Low,high,True
+48,gehaeuse gebrochen beim sturz,Mechanical Damage,High,high,False
+49,drucksensor liefert sprunghafte werte,Sensor Fault,High,high,False
+50,can bus komplett stumm nach start,Communication Error,High,high,False
+51,power supply schaltet nicht ein,Power Supply Issue,High,high,False
+52,"kalibrierung langsam raus, offset waechst",Calibration Drift,Medium,high,False
+53,platinenkante abgebrochen,Mechanical Damage,High,high,False
+54,"optischer sensor verschmutzt, keine daten",Sensor Fault,Medium,high,False
+55,kommunikation instabil bei vibration,Communication Error,Medium,high,False
+56,spannung faellt unter 3v bei last,Power Supply Issue,High,high,False
+57,langzeit drift im gyroskop,Calibration Drift,Medium,high,False
+58,mechanischer bruch am connector,Mechanical Damage,High,high,False
+59,sensor gibt sporadisch falsche id,Sensor Fault,Medium,high,False
+60,ecu verliert verbindung im standby,Communication Error,High,high,True
+61,"board zieht zu viel strom, ueberlast",Power Supply Issue,High,high,False
+62,kalibrier routine schlaegt fehl,Calibration Drift,Medium,high,False
+63,"kuehlkoerper lose, thermisch schlecht",Mechanical Damage,High,high,True
+64,naeherungssensor reagiert verzoegert,Sensor Fault,Medium,high,False
+65,crc fehler auf serieller schnittstelle,Communication Error,Medium,high,False
+66,regler liefert falsche ausgangsspannung,Power Supply Issue,High,high,False
+67,messgenauigkeit unter spezifikation,Calibration Drift,Medium,high,False
+68,steckverbinder gebrochen nach vibration,Mechanical Damage,High,high,False
+69,sensor uebertraegt nur nullen,Sensor Fault,High,high,False
+70,wlan modul verliert paket dauernd,Communication Error,High,high,True
+71,modul reagiert nicht nach firmware update,Communication Error,High,high,True
+72,"werte springen nach kalibrierung, ursache unklar",Calibration Drift,Medium,high,True
+73,board verhaelt sich komisch seit einbau,Sensor Fault,High,medium,True
+74,"intermittierender fehler, mal sensor mal bus",Communication Error,Medium,medium,True
+75,"system instabil, koennte spannung oder software sein",Power Supply Issue,High,medium,False
+76,modul liefert daten aber langsam und ungenau,Sensor Fault,Medium,high,True
+77,nach transport funktioniert etwas nicht richtig,Mechanical Damage,Medium,medium,True
+78,"sporadischer reset, grund nicht identifiziert",Power Supply Issue,High,medium,True
+79,kommunikation ok aber messwerte driften leicht,Calibration Drift,Low,high,True
+80,gehaeuse ok aber sensor manchmal aus,Sensor Fault,Medium,high,False
+81,"fehler tritt nur bei hitze auf, unklar was",Power Supply Issue,Medium,medium,True
+82,"device antwortet verzoegert, timing problem",Communication Error,Medium,high,True

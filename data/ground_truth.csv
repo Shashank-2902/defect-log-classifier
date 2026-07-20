@@ -1,0 +1,83 @@
+id,true_category,true_severity
+1,Sensor Fault,High
+2,Communication Error,High
+3,Power Supply Issue,High
+4,Calibration Drift,Medium
+5,Mechanical Damage,Medium
+6,Sensor Fault,Medium
+7,Communication Error,Medium
+8,Power Supply Issue,High
+9,Calibration Drift,Low
+10,Mechanical Damage,Low
+11,Sensor Fault,High
+12,Communication Error,Medium
+13,Power Supply Issue,High
+14,Calibration Drift,Medium
+15,Mechanical Damage,Medium
+16,Sensor Fault,Medium
+17,Communication Error,Medium
+18,Power Supply Issue,High
+19,Sensor Fault,High
+20,Calibration Drift,Low
+21,Mechanical Damage,Low
+22,Communication Error,Medium
+23,Power Supply Issue,High
+24,Sensor Fault,Low
+25,Communication Error,High
+26,Power Supply Issue,Medium
+27,Calibration Drift,Medium
+28,Mechanical Damage,Medium
+29,Sensor Fault,Low
+30,Communication Error,Medium
+31,Power Supply Issue,High
+32,Calibration Drift,Medium
+33,Mechanical Damage,High
+34,Sensor Fault,High
+35,Communication Error,Low
+36,Power Supply Issue,High
+37,Calibration Drift,Low
+38,Mechanical Damage,Low
+39,Sensor Fault,High
+40,Communication Error,Medium
+41,Power Supply Issue,Medium
+42,Calibration Drift,Medium
+43,Mechanical Damage,Medium
+44,Sensor Fault,Medium
+45,Communication Error,Medium
+46,Power Supply Issue,Medium
+47,Calibration Drift,Low
+48,Mechanical Damage,High
+49,Sensor Fault,Medium
+50,Communication Error,High
+51,Power Supply Issue,High
+52,Calibration Drift,Medium
+53,Mechanical Damage,Medium
+54,Sensor Fault,Low
+55,Communication Error,Medium
+56,Power Supply Issue,High
+57,Calibration Drift,Low
+58,Mechanical Damage,High
+59,Sensor Fault,Medium
+60,Communication Error,Medium
+61,Power Supply Issue,High
+62,Calibration Drift,Medium
+63,Mechanical Damage,Low
+64,Sensor Fault,Low
+65,Communication Error,Medium
+66,Power Supply Issue,Medium
+67,Calibration Drift,Medium
+68,Mechanical Damage,Medium
+69,Sensor Fault,High
+70,Communication Error,Low
+71,Communication Error,High
+72,Calibration Drift,Medium
+73,Mechanical Damage,Low
+74,Communication Error,Medium
+75,Power Supply Issue,High
+76,Sensor Fault,Medium
+77,Mechanical Damage,Medium
+78,Power Supply Issue,High
+79,Calibration Drift,Low
+80,Sensor Fault,Medium
+81,Calibration Drift,Medium
+82,Communication Error,Low
