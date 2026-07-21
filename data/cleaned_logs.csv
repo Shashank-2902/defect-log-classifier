@@ -28,7 +28,7 @@ id,description,ai_category,ai_severity,ai_confidence,needs_review
 27,drift in messung nach temperaturwechsel,Calibration Drift,Medium,high,False
 28,pin header abgebrochen,Mechanical Damage,High,high,False
 29,proximity sensor rauscht stark,Sensor Fault,High,high,False
-30,can frame verloren unter last,Communication Error,High,high,False
+30,can frame verloren unter last,Communication Error,Medium,high,False
 31,netzteil liefert instabile spannung,Power Supply Issue,High,high,False
 32,sensor kalibrierung ausserhalb toleranz,Calibration Drift,Medium,high,False
 33,leiterbahn gerissen sichtbar,Mechanical Damage,High,high,False
@@ -41,7 +41,7 @@ id,description,ai_category,ai_severity,ai_confidence,needs_review
 40,"bus kollision auf can, viele fehler",Communication Error,High,high,False
 41,ground loop verursacht noise auf supply,Power Supply Issue,Medium,high,False
 42,kalibrierwerte verschoben nach reset,Calibration Drift,Medium,high,True
-43,"stecker korrodiert, kontakt schlecht",Mechanical Damage,High,medium,False
+43,"stecker korrodiert, kontakt schlecht",Mechanical Damage,High,high,False
 44,feuchtigkeitssensor eingefroren wert,Sensor Fault,High,high,False
 45,modbus antwortet nicht mehr,Communication Error,High,high,False
 46,5v line noise ueber grenzwert,Power Supply Issue,High,high,False
@@ -65,15 +65,15 @@ id,description,ai_category,ai_severity,ai_confidence,needs_review
 64,naeherungssensor reagiert verzoegert,Sensor Fault,Medium,high,False
 65,crc fehler auf serieller schnittstelle,Communication Error,Medium,high,False
 66,regler liefert falsche ausgangsspannung,Power Supply Issue,High,high,False
-67,messgenauigkeit unter spezifikation,Calibration Drift,Medium,high,False
+67,messgenauigkeit unter spezifikation,Calibration Drift,High,high,False
 68,steckverbinder gebrochen nach vibration,Mechanical Damage,High,high,False
 69,sensor uebertraegt nur nullen,Sensor Fault,High,high,False
 70,wlan modul verliert paket dauernd,Communication Error,High,high,True
 71,modul reagiert nicht nach firmware update,Communication Error,High,high,True
 72,"werte springen nach kalibrierung, ursache unklar",Calibration Drift,Medium,high,True
-73,board verhaelt sich komisch seit einbau,Sensor Fault,High,medium,True
+73,board verhaelt sich komisch seit einbau,Sensor Fault,Medium,medium,True
 74,"intermittierender fehler, mal sensor mal bus",Communication Error,Medium,medium,True
-75,"system instabil, koennte spannung oder software sein",Power Supply Issue,High,medium,False
+75,"system instabil, koennte spannung oder software sein",Power Supply Issue,High,high,False
 76,modul liefert daten aber langsam und ungenau,Sensor Fault,Medium,high,True
 77,nach transport funktioniert etwas nicht richtig,Mechanical Damage,Medium,medium,True
 78,"sporadischer reset, grund nicht identifiziert",Power Supply Issue,High,medium,True

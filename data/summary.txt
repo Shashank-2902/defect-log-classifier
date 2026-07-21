@@ -3,7 +3,7 @@ DEFECT LOG CLASSIFICATION - SUMMARY
 Total logs processed: 82
 Auto-classified (trusted): 62
 Flagged for human review: 20
-High-severity items to prioritize: 47
+High-severity items to prioritize: 46
 
 Accuracy against the answer key:
   Simple keyword baseline: 76%
