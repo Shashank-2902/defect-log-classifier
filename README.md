@@ -60,6 +60,15 @@ including ones it got wrong. The review trigger was changed to flag rows where
 the keyword baseline and the AI **disagree** — a genuine conflict between two
 independent methods, which is a more reliable signal that a row is hard.
 
+## Agent Skill
+
+This project includes an Agent Skill (`.claude/skills/defect-log-classifier/SKILL.md`)
+so an AI assistant such as Claude Code can run the whole workflow from a plain-English
+request. The skill wraps the pipeline into ordered steps and enforces the human-review
+step: the assistant runs the classifier, then stops and presents the flagged rows for a
+person to confirm before the results are treated as final. The scripts are unchanged —
+the skill is a plain-English instruction file layered on top.
+
 ## Limitations (honest)
 
 - The data is synthetic and fairly clean; real logs would be messier.
