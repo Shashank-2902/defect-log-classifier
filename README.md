@@ -1,9 +1,9 @@
 # defect-log-classifier
 
-An AI-assisted tool that reads messy, free-text defect logs and sorts each one
-into a fixed category and severity level, flagging uncertain cases for a human
-to review. Built as a small, honest demonstration of using an AI model to add
-measurable value to a real business process.
+A tool that reads messy, free-text defect logs and sorts each one into a fixed
+category and severity level, flagging uncertain cases for a person to review.
+It is a small demonstration of measuring what an AI model adds to a real
+business process compared with a simple non-AI baseline.
 
 > **Note on data:** The dataset is fully synthetic. It is modelled to resemble
 > messy automotive-semiconductor quality logs (mixed German/English, typos,
@@ -57,7 +57,7 @@ enough to warrant paying double for that last point.
 An earlier version flagged rows using the model's own self-reported confidence.
 That did not work: the model reported high confidence on nearly every row,
 including ones it got wrong. The review trigger was changed to flag rows where
-the keyword baseline and the AI **disagree** — a genuine conflict between two
+the keyword baseline and the AI **disagree**, a genuine conflict between two
 independent methods, which is a more reliable signal that a row is hard.
 
 ## Agent Skill
@@ -66,10 +66,10 @@ This project includes an Agent Skill (`.claude/skills/defect-log-classifier/SKIL
 so an AI assistant such as Claude Code can run the whole workflow from a plain-English
 request. The skill wraps the pipeline into ordered steps and enforces the human-review
 step: the assistant runs the classifier, then stops and presents the flagged rows for a
-person to confirm before the results are treated as final. The scripts are unchanged —
-the skill is a plain-English instruction file layered on top.
+person to confirm before the results are treated as final. The scripts are unchanged; the skill is a plain-English instruction file layered
+on top.
 
-## Limitations (honest)
+## Limitations
 
 - The data is synthetic and fairly clean; real logs would be messier.
 - The 1-point gap between the two models is within noise on 82 rows; the honest
@@ -104,7 +104,18 @@ python compare_models.py
 pytest
 ```
 
+## Project layout
+
+```
+main.py             runs the full pipeline
+compare_models.py   compares two models on accuracy and price
+generate_data.py    creates the synthetic logs and the answer key
+src/                config, loader, baseline, classifier, reporter, Groq client
+tests/              pytest tests for the baseline and the accuracy calculation
+data/               input logs, answer key and generated outputs
+```
+
 ## Tech
 
-Python, pandas, Groq API (openai/gpt-oss-20b), rapidfuzz, pytest.
-Plain functions in separate modules; no framework.
+Python, pandas, Groq API (openai/gpt-oss-20b), RapidFuzz, pytest.
+Plain functions in separate modules, no framework.

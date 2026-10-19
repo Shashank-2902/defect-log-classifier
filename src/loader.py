@@ -1,18 +1,14 @@
-# loader.py
-# One job: read the raw logs CSV into a table (DataFrame) we can work with.
+"""Reads the raw defect logs from CSV."""
 
 import pandas as pd
 
-def load_logs(path):
-    """Read the raw logs CSV and return it as a pandas DataFrame (a table)."""
-    df = pd.read_csv(path)
+REQUIRED_COLUMNS = {"id", "description"}
 
-    # A tiny safety check: make sure the columns we expect are actually there.
-    # If someone hands us the wrong file, we stop early with a clear message
-    # instead of a confusing crash somewhere deeper in the code.
-    expected = {"id", "description"}
-    missing = expected - set(df.columns)
+
+def load_logs(path):
+    """Return the raw logs as a DataFrame, failing early if columns are missing."""
+    df = pd.read_csv(path)
+    missing = REQUIRED_COLUMNS - set(df.columns)
     if missing:
         raise ValueError(f"raw logs file is missing columns: {missing}")
-
     return df
