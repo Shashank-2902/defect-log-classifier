@@ -1,17 +1,11 @@
-# baseline.py
-# A simple, NON-AI classifier. It just checks whether certain keywords
-# appear in the text. It is deliberately basic: its job is to be the
-# "before" number that the AI has to beat. If the AI only ties this,
-# the AI wasn't worth the cost.
+"""Keyword baseline: the non-AI "before" that the classifier has to beat."""
 
 from rapidfuzz import fuzz
 
-# A DICTIONARY: each key is a category, each value is a list of keywords
-# (German + English) we'd expect to see for that category.
 KEYWORDS = {
     "Sensor Fault": ["sensor", "reading", "signal", "werte", "messwert", "output"],
     "Communication Error": ["can", "bus", "timeout", "communication", "kommunikation",
-                             "ethernet", "uart", "spi", "i2c", "crc", "link"],
+                            "ethernet", "uart", "spi", "i2c", "crc", "link"],
     "Power Supply Issue": ["spannung", "voltage", "power", "rail", "regler", "strom",
                            "netzteil", "supply", "5v", "3.3v", "3v"],
     "Calibration Drift": ["kalibrier", "calibration", "drift", "offset", "toleranz",
@@ -20,13 +14,15 @@ KEYWORDS = {
                           "bruch", "verbogen", "schraube", "kante"],
 }
 
+EXACT_MATCH_SCORE = 2
+FUZZY_MATCH_SCORE = 1
+FUZZY_THRESHOLD = 88
+
 
 def guess_category(text):
-    """Return the category whose keywords best match the text.
+    """Return the category with the highest keyword score, or 'Unknown'.
 
-    We score each category by how many of its keywords appear in the text,
-    with a little fuzzy matching so small typos still count. The highest
-    scoring category wins. If nothing matches, we return 'Unknown'.
+    An exact keyword hit scores higher than a fuzzy hit, which tolerates typos.
     """
     text_lower = text.lower()
     best_category = "Unknown"
@@ -35,12 +31,10 @@ def guess_category(text):
     for category, words in KEYWORDS.items():
         score = 0
         for word in words:
-            # exact match is the strong signal
             if word in text_lower:
-                score += 2
-            # fuzzy match catches close-but-not-exact spellings (typos)
-            elif fuzz.partial_ratio(word, text_lower) > 88:
-                score += 1
+                score += EXACT_MATCH_SCORE
+            elif fuzz.partial_ratio(word, text_lower) > FUZZY_THRESHOLD:
+                score += FUZZY_MATCH_SCORE
         if score > best_score:
             best_score = score
             best_category = category
@@ -49,7 +43,7 @@ def guess_category(text):
 
 
 def run_baseline(df):
-    """Add a 'baseline_category' column to the table using guess_category."""
-    df = df.copy()  # work on a copy so we never change the original by accident
+    """Return a copy of the table with a 'baseline_category' column."""
+    df = df.copy()
     df["baseline_category"] = df["description"].apply(guess_category)
     return df

@@ -1,15 +1,15 @@
-# generate_data.py
-# Run this ONCE to create the two CSV files in the data/ folder.
-# The logs are fully synthetic (made up) but written to look like real,
-# messy automotive-semiconductor defect notes: mixed German/English, typos,
-# inconsistent wording. This is what real quality logs actually look like.
+"""Generates the synthetic dataset: data/raw_logs.csv and data/ground_truth.csv.
+
+The logs are made up but written to resemble messy automotive-semiconductor
+defect notes: mixed German/English, typos and inconsistent wording. Run this
+once before the pipeline.
+"""
 
 import pandas as pd
+
 from src import config
 
-# Our single source of truth: each row is one made-up defect note, together
-# with the correct category and severity that WE assign by hand.
-# The format of each row is: (description, true_category, true_severity)
+# Each entry is (description, true_category, true_severity), labelled by hand.
 LOGS = [
     ("ultraschall sensor gibt keine daten, modul reagiert nicht", "Sensor Fault", "High"),
     ("CAN bus timeout, ECU no respond after 3 retries", "Communication Error", "High"),
@@ -81,9 +81,8 @@ LOGS = [
     ("steckverbinder gebrochen nach vibration", "Mechanical Damage", "Medium"),
     ("sensor uebertraegt nur nullen", "Sensor Fault", "High"),
     ("wlan modul verliert paket dauernd", "Communication Error", "Low"),
-    # --- Ambiguous / hard rows: legitimately borderline cases. ---
-    # These are meant to be difficult. The "true" label is the most
-    # defensible single choice, but reasonable people could disagree.
+    # Ambiguous rows: borderline cases where the label is the most defensible
+    # single choice, but reasonable people could disagree.
     ("modul reagiert nicht nach firmware update", "Communication Error", "High"),
     ("werte springen nach kalibrierung, ursache unklar", "Calibration Drift", "Medium"),
     ("board verhaelt sich komisch seit einbau", "Mechanical Damage", "Low"),
@@ -99,21 +98,16 @@ LOGS = [
 ]
 
 def main():
-    # Turn the list of tuples into a table (DataFrame) with named columns.
     df = pd.DataFrame(LOGS, columns=["description", "true_category", "true_severity"])
-
-    # Give every row a simple id number: 1, 2, 3, ...
-    # insert(0, ...) puts this new column at the very front.
     df.insert(0, "id", range(1, len(df) + 1))
 
-    # raw_logs.csv = what the "system" would receive: just id + messy text.
-    # No answers here. This is the input we will classify.
+    # Input the pipeline sees: id and text only.
     df[["id", "description"]].to_csv(config.RAW_LOGS_PATH, index=False)
-
-    # ground_truth.csv = our answer key: id + the correct category and severity.
+    # Answer key used for scoring.
     df[["id", "true_category", "true_severity"]].to_csv(config.GROUND_TRUTH_PATH, index=False)
 
     print(f"Wrote {len(df)} rows to {config.RAW_LOGS_PATH} and {config.GROUND_TRUTH_PATH}")
+
 
 if __name__ == "__main__":
     main()
